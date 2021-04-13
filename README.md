@@ -22,9 +22,9 @@ For future releases, the application will incorporated the ability to search for
 
 
 ## Links to deployed application
-* URL of deployed application: https://e-giftz.github.io/Password-Generator-Application/
+* URL of deployed application: https://phil-stew.github.io/Sports-Reel/
 
-* URL of GitHub repository containing the code: https://github.com/e-giftz/Password-Generator-Application
+* URL of GitHub repository containing the code: https://github.com/phil-stew/Sports-Reel/tree/Isaac
 
 ## Screenshots of Web App
 
