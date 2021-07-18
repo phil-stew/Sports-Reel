@@ -58,9 +58,7 @@ function dispTeam() {
          //var brandLogoEl = 
          $('.brand-logo').attr('href', httPrefix+trec.strWebsite).text(trec.strTeam);
         // var brandLogoEl = $('.brand-logo').attr('href', trec.strWebsite).append(logoEl);
-         
-         //brandLogoEl.append(logoEl);
-         
+                
          var navMobileEl = $('#nav-mobile')
          var aEl = $('<a>').attr('href',httPrefix+trec.strFacebook).text("Facebook")
          aEl.attr('target', '_blank');

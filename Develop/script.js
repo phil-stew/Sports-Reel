@@ -23,7 +23,7 @@ function getTeams() {
         })
         .then(function (data) {
             teamDB = data;
-          //  console.log("teamDB: ", teamDB);
+         
             showTeams();
            // getPlayers()
         });
@@ -56,18 +56,12 @@ function showTeams() {
         var teamName = (teamDB.teams[i].strTeam);
         var teamid = teamDB.teams[i].idTeam;
         teamList[i] = teamName;
-        /*teamNameEl = $('<li>');
-        teamNameEl.attr("data-index", i);
-        teamNameEl.attr("data-id", teamid);
-        teamNameEl.text(teamName);
-        teamListEl.append(teamNameEl);*/
+       
         
         tNameEl.append('<option value="' + teamName + '">' + teamName + '</option>');
-       // playerTeamEl.append('<option value="' + teamName + '">' + teamName + '</option>');
-
+      
     }
-   // alert(teamIdName);
-   // alert(tNameEl.innerHTML);
+ 
 
     teamNames = teamList;
     //setAutoComplete(teamList)
@@ -88,7 +82,7 @@ function searchTeams() {
     var teamRecord = teamDB.teams[teamIndex];
     var teamRec = JSON.stringify(teamRecord);
     sessionStorage.setItem("teamRecord", teamRec);
-    var queryString = './team.html';      ///?q=' + teamIndex+"&teamid=";         //searchInputVal + '&format=' + formatInputVal;
+    var queryString = './team.html';        
     location.assign(queryString);
   }else{
     alert("Team name does not exists in NBA league - "+teamNameSearch);
@@ -114,9 +108,7 @@ playerBtn.on('click', function(event){
 teamListEl.on('click', function(event){
   event.preventDefault();
   var teamIndex = event.target.dataset.index;
-  //var teamId = event.target.dataset.id;
-  //console.log(teamIndex + " --- " + teamId);
-  //console.log("data : " + teamDB);
+ 
   var teamRecord = teamDB.teams[teamIndex];
   var teamRec = JSON.stringify(teamRecord);
   //console.log(teamRec);
@@ -130,11 +122,7 @@ teamListEl.on('click', function(event){
   /// Call the teamStats function next
 })
 
-// fetch('https://www.thesportsdb.com/api/v1/json/1/lookup_all_teams.php?id=4387')
-//   .then(response => response.json())
-//   //.then(data => console.log(data));
-//   .then(data => console.log(data[0].strTeam));
-// Autocomplete widget
+
 function setAutoComplete(teamListNames){
     $('#nbaTeam').autocomplete({
       source: teamListNames,
@@ -145,9 +133,7 @@ function setPlayerAutoComplete(playerList){
     source: playerList,
   });
 }
-/*fetch("./players.json")
-  .then(response => response.json())
-  .then(json => console.log(json));*/
+
 
 getTeams();
 
